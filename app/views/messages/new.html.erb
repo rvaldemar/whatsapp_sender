@@ -1,0 +1,12 @@
+<%= simple_form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- [...] all the fields -->
+<% end %>
